@@ -1,15 +1,16 @@
+
 # IoT RFID Smart Parking & Slot Management System
 
 ---
 
 ## Abstract
- <br />
+
 This project implements a secure, automated smart parking solution using ESP8266, RFID cards, servo gates, LCD display, Blynk IoT connectivity, and IR sensor-based slot detection. The system manages up to four slots and uses EEPROM to persistently store authorized cards for entry. Each vehicle scans its RFID card at the gate; only permitted cards allow the servo-controlled barrier to open, with audit logs and access events recorded in the Blynk cloud. IR sensors detect real-time occupancy and update available slots on both the local LCD and the remote app. Administrators can add or delete authorized cards via Blynk, monitor uptime and slot status, and perform manual overrides if needed. The modular architecture supports easy expansion to more slots and additional sensors, making it scalable for deployments in residential complexes, public parking lots, or institutional campuses. This system enhances parking security, increases automation, lowers labor dependency, and enables detailed data analytics for facility managers.
 
 ---
 
 ## Hardware Components
- <br />
+
 - ESP8266 (WiFi main controller)
 - MFRC522 RFID Reader
 - PCF8574 I/O Expander (I2C)
@@ -22,14 +23,14 @@ This project implements a secure, automated smart parking solution using ESP8266
 ---
 
 ## Software Structure
- <br />
+
 - `main.ino`: RFID, slot management, servo, LCD, Blynk logic
 - Built-in support for: BlynkSimpleEsp8266, MFRC522, PCF8574, LiquidCrystal_I2C
 
 ---
 
 ## Key Features
- <br />
+
 - RFID authentication for entry/exit
 - Real-time IR-based slot status updating
 - Servo gate automation
@@ -40,7 +41,7 @@ This project implements a secure, automated smart parking solution using ESP8266
 ---
 
 ## UML Class Diagram
- <br />
+
 ```mermaid
 classDiagram
 class ESP8266 {
@@ -88,7 +89,7 @@ IR_Sensors --> PCF8574 : via I2C
 ---
 
 ## Flowchart
- <br />
+
 ```mermaid
 flowchart TD
 A[System Startup] --> B{WiFi & Device Init}
@@ -106,7 +107,7 @@ H --> C
 ---
 
 ## State Diagram
- <br />
+
 ```mermaid
 stateDiagram-v2
 [*] --> Init
@@ -127,16 +128,16 @@ Open_Gate --> Update_Slots
 ---
 
 ## File Descriptions
- <br />
+
 | File/Folder     | Content/Function                                |
 |-----------------|-------------------------------------------------|
 | main.ino        | Main firmware code                              |
-| Schematic      | Schematic               |
+| Schematic       | Schematic                                       |
 
 ---
 
 ## License
- <br />
+
 MIT License
 
 ---
